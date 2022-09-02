@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\nateq\Desktop\63e03aec93a5d17485bdc5a0d970a709.png" />
+</head>
+<body>
+    <div class="main">
+        <div class="background">
+            <div class="date">
+                <p id="dateOut">~DATE~</p> </div>
+            <div class="time">
+                <p id="timeOut">~TIME~</p></div>
+        </div>
+    </div>
+</body>
+
+<script>
+//get month & month name
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const a = new Date();
+let month = months[a.getMonth()];
+if (month < 10) {
+    month = "0" + month
+}
+console.log(month)
+
+//get day of month
+let b = new Date();
+let day = b.getDate();
+if (day < 10) {
+    day = "0" + day
+}
+console.log(b)
+
+//get year
+let c = new Date();
+let year = c.getFullYear();
+console.log(c)
+
+//output
+//document.getElementById('dateOut').innerHTML = month + "/" + b + "/" + c
+//document.getElementById('dateOut').innerHTML = 'Hey Bud'
+let results = month + "/" + day + "/" + year
+console.log(results)
+document.getElementById("dateOut").innerHTML = results
+
+
+
+
+//get hours
+let d = new Date();
+let hours = d.getHours();
+hours = hours % 12;
+hours = hours ? hours : 12;
+console.log(hours)
+
+//get min
+const e = new Date();
+let min = e.getMinutes();
+if (min < 10) {
+min = "0" + min
+}
+console.log(min)
+
+//get sec
+const f = new Date();
+let seconds = f.getSeconds();
+if (seconds < 10) {
+    seconds = "0" + seconds
+}
+console.log(seconds)
+
+//get am | pm
+let ampm = hours >= 12 ? 'am' : 'pm';
+
+//output
+let results2 = hours + ":" + min + ":" + seconds + " " + ampm
+console.log(results2)
+document.getElementById('timeOut').innerHTML = results2
+
+setTimeout(() => {location.reload(); }, 2000);
+</script>
+</html>
+

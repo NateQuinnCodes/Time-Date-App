@@ -1,0 +1,28 @@
+body {
+    background-image: url(https://w0.peakpx.com/wallpaper/768/13/HD-wallpaper-new-york-city-skyline-architecture-nighttime-east-river-buildings-skyline-new-york-city-skyscrapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    text-align: center;
+    padding-top: 20vw;
+}
+
+.time {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 250%;
+    color: black;
+}
+
+.date {
+    font-size: 185%;
+    color: black;
+}
+
+.background {
+    background-color: white;
+    display: inline-block;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
